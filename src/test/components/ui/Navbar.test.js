@@ -6,7 +6,7 @@ import { AuthContext } from '../../../auth/authContext'
 import { types } from '../../../types/types';
 
 //! shallow para componente sencillo
-//! moun cuando son mas componentes
+//! mount cuando son mas componentes
 
 const mockNavigate = jest.fn()
 jest.mock('react-router-dom', () => ({
