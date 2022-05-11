@@ -27,6 +27,7 @@ export const HeroScreen = () => {
   const handleReturn = () => {
     navigate(-1)
   }
+
   return (
     <div className='row mt-5'>
       <div className='col-4' style={{ display: 'flex' }}>
