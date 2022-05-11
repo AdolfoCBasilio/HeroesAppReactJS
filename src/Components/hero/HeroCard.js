@@ -8,9 +8,9 @@ export const HeroCard = ({
     first_appearance,
     characters,
 }) => {
-    // const herosImages = require.context('../../assets/', true)
-    const imagePath = `/assets/${id}.jpg`;
-    // const imagePath = herosImages(`./${id}.jpg`);
+    const herosImages = require.context('../../assets/', true)
+    // const imagePath = `/assets/${id}.jpg`;
+    const imagePath = herosImages(`./${id}.jpg`);
     // console.log('HEROCARD')
     return (
         <div className='col'>

@@ -2,6 +2,9 @@ import React, { useMemo } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { getHeroById } from '../../selectors/getHeroById'
 
+const herosImages = require.context('../../assets/', true)
+// const imagePath = `../assets/heroes/heore${id}.jpg`
+
 export const HeroScreen = () => {
   // console.log('HEROSCREEN')
 
@@ -20,9 +23,9 @@ export const HeroScreen = () => {
     alter_ego,
     first_appearance,
     characters, } = hero;
-  // const herosImages = require.context('../../assets/', true)
-  const imagePath = `/assets/${id}.jpg`
-  // const imagePath = herosImages(`./${id}.jpg`);
+
+  const imagePath = herosImages(`./${id}.jpg`);
+
 
   const handleReturn = () => {
     navigate(-1)
