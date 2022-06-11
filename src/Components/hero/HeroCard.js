@@ -8,9 +8,9 @@ export const HeroCard = ({
     first_appearance,
     characters,
 }) => {
-    const herosImages = require.context('../../assets/', true)
-    // const imagePath = `/assets/${id}.jpg`;
-    const imagePath = herosImages(`./${id}.jpg`);
+    const herosImages = require.context('../../assets/', true) // true para buscar en subdirectorios
+    // const imagePath = `/assets/${id}.jpg`; // path de la imagen
+    const imagePath = herosImages(`./${id}.jpg`); // path de la imagen
     // console.log('HEROCARD')
     return (
         <div className='col'>
@@ -18,6 +18,7 @@ export const HeroCard = ({
                 <div className='row no-gutters'>
                     <div className='col-4'>
                         <img src={imagePath} className="card-img" alt={superhero} />
+                        {/* <img src={require('../ruta.png)} className="card-img" alt={superhero} /> */}
                     </div>
                     <div className='col-8'>
                         <div className='card-body'>
